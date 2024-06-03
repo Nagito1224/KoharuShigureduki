@@ -32,9 +32,14 @@ h1 {
     border-left: 2px #4e4e4e solid;
 }
 
+@font-face {
+    font-family: 'karakaze-R';
+    src: url('./fonts/karakaze-R.ttf') format('truetype');
+    src: url('./fonts/karakaze-R.otf') format('opentype');
+}
+
 /* header */
 header {
-    position: absolute;
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -44,32 +49,33 @@ header {
     padding: 30px 5%;
 
     background: linear-gradient(to right, rgba(255, 255, 255, 0.4), rgba(0, 0, 0, 0.4));
+    border-bottom: #000 4px double;
 }
 
-.header_text a {
+.header-text a {
     font-size: 20px;
 
     color: #000;
 }
 
-.header_links {
+.header-links {
     display: flex;
     align-items: center;
 }
 
-.header_links li {
+.header-links li {
     padding-left: 20px;
 
     font-size: 18px;
 }
 
-.header_links a {
+.header-links a {
     position: relative;
 
     color: #fff;
 }
 
-.header_links a::after {
+.header-links a::after {
     position: absolute;
     left: 0;
     content: '';
@@ -82,7 +88,23 @@ header {
     transition: transform 0.3s;
 }
 
-.header_links a:hover::after {
+.header-links a:hover::after {
     transform: scale(1, 1);
     transform-origin: left top;
+}
+
+/* main */
+.main {
+    height: 100vh;
+
+    font-family: 'karakaze-R', sans-serif;
+
+    background-color: #f2ecf5;
+}
+
+.main-text {
+    -ms-writing-mode: tb-rl;
+    writing-mode: vertical-rl;
+
+    font-size: 20px;
 }
