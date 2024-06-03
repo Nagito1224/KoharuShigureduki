@@ -32,10 +32,12 @@ h1 {
     border-left: 2px #4e4e4e solid;
 }
 
-@font-face {
-    font-family: 'karakaze-R';
-    src: url('./fonts/karakaze-R.ttf') format('truetype');
-    src: url('./fonts/karakaze-R.otf') format('opentype');
+.typing {
+    opacity: 0;
+}
+
+.typing.active {
+    opacity: 1;
 }
 
 /* header */
@@ -48,7 +50,10 @@ header {
     width: 90%;
     padding: 30px 5%;
 
-    background: linear-gradient(to right, rgba(255, 255, 255, 0.4), rgba(0, 0, 0, 0.4));
+    font-family: "Noto Serif JP", serif;
+    font-optical-sizing: auto;
+
+    background: linear-gradient(to right, rgba(255, 255, 255, 0.4), rgba(0, 0, 0, 0.6));
     border-bottom: #000 4px double;
 }
 
@@ -95,16 +100,19 @@ header {
 
 /* main */
 .main {
-    height: 100vh;
+    height: 80vh;
+    font-family: "Noto Serif JP", serif;
+    font-optical-sizing: auto;
 
-    font-family: 'karakaze-R', sans-serif;
-
-    background-color: #f2ecf5;
+    background-color: #ffffff;
 }
 
 .main-text {
+    margin: 30px auto;
+
     -ms-writing-mode: tb-rl;
     writing-mode: vertical-rl;
 
-    font-size: 20px;
+
+    font-size: 25px;
 }
