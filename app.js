@@ -11,7 +11,7 @@ let callback = (entries, observer) => {
             let typeContent = entry.target.innerHTML;
             // <br>タグを特別なトークンに置き換える
             typeContent = typeContent.replace(/<br>/g, '\n');
-            let typeSprit = typeContent.split('');
+            let typeSprit = typeContent.split(/(<[^>]+>|[^<])/).filter(Boolean);
             let typeSpeed = entry.target.getAttribute('data-speed');
             entry.target.innerHTML = '';
             entry.target.classList.add('active');
@@ -32,7 +32,7 @@ let callback = (entries, observer) => {
 
         }
     });
-}
+} 
 
 let observer = new IntersectionObserver(callback, options);
 
