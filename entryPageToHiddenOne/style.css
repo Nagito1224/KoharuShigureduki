@@ -32,6 +32,13 @@ h1 {
     border-left: 2px #4e4e4e solid;
 }
 
+p{
+    font-size: 20px;
+    font-family: "Noto Serif JP", serif;
+    font-optical-sizing: auto;
+}
+
+
 .typing {
     opacity: 0;
 }
