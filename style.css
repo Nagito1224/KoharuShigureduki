@@ -13,6 +13,7 @@ li {
 
 a {
     text-decoration: none;
+    color: #000;
 }
 
 .wrap {
@@ -172,6 +173,14 @@ header {
 .works {
     position:relative;
     margin-top: 60px;
+}
+
+.works a{
+    transition: 0.3s;
+}
+
+.works a:hover{
+    color: rgb(228, 190, 133);
 }
 
 
