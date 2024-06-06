@@ -150,8 +150,8 @@ header {
     transform: scale(1, 1);
 }
 
-/* about */
-.about::after {
+/* works */
+.works::after {
     position: absolute;
     left: 0;
     content: '';
@@ -164,19 +164,16 @@ header {
     transition: transform 1.5s;
 }
 
-.about:hover::after {
+.works:hover::after {
     transform: scale(1, 1);
     transform-origin: left top;
 }
 
-.about {
+.works {
     position:relative;
+    margin-top: 60px;
 }
 
-.about-text{
-    display: flex;
-    margin: 30px auto;
-}
 
 /* footer */
 .footer {

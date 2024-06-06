@@ -47,6 +47,12 @@ p{
     opacity: 1;
 }
 
+#body{
+    background-image: linear-gradient(#00000052, #0000009a), url(../images/fallImage.jpg);
+    
+    background-size: cover;
+}
+
 /* header */
 header {
     display: flex;
@@ -61,7 +67,7 @@ header {
     font-optical-sizing: auto;
 
     background: #000;
-    border-bottom: #ffffff 6px double;
+    border-bottom: #ffffff 2px solid;
 }
 
 .header-text a {
@@ -121,12 +127,15 @@ header {
     border: #000 double 3px;
 }
 
+
 /* footer */
 .footer {
     background-color: #000;
     margin-top: 40px;
     font-family: "Noto Serif JP", serif;
     font-optical-sizing: auto;
+
+    border-top: #ffffff 1px solid;
 }
 
 .footer .copyright {

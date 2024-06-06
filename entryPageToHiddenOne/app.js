@@ -17,29 +17,6 @@ function handleChange(event) {
 
     hiddenGateElement.addEventListener('click', 
         () => {
-            setTimeout(() => {
-                location.href = val + ".html"
-            }, 1000);
+                location.href = val + ".html";
         });
-}
-
-function getMacAddress() {
-    var obj = new ActiveXObject("WbemScripting.SWbemLocator");
-    var s = obj.ConnectServer(".");
-    var properties = s.ExecQuery("SELECT * FROM Win32_NetworkAdapterConfiguration");
-    var e = new Enumerator(properties);
-    while (!e.atEnd()) {
-        e.moveNext();
-        var p = e.item();
-        if (!p) continue;
-        if (null != p.MACAddress) {
-            return p.MACAddress;
-        }
-    }
-    return null;
-}
-
-function getComputerName() {
-    var objNetWork = new ActiveXObject("WScript.Network");
-    return objNetWork.ComputerName;
 }
